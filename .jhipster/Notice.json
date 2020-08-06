@@ -1,0 +1,40 @@
+{
+  "name": "Notice",
+  "fields": [
+    {
+      "fieldName": "title",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "author",
+      "otherEntityRelationshipName": "notice",
+      "relationshipName": "author",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "board",
+      "otherEntityRelationshipName": "notice",
+      "relationshipName": "noticeList",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20200806132731",
+  "entityTableName": "notice",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
